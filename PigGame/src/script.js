@@ -1,5 +1,23 @@
 "use strict";
 
+let seconds = 0;
+let minutes = 0;
+
+const timerElement = document.getElementById('timer');
+
+function updateTimer() {
+  seconds++;
+  if (seconds === 60) {
+    seconds = 0;
+    minutes++;
+  }
+  const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  timerElement.textContent = formattedTime;
+}
+
+// Inicia el timer al cargar la página
+setInterval(updateTimer, 1000);
+
 // Funciones utilitarias
 const getDiceValue = () => Math.floor(Math.random() * 6) + 1; // entre 1 y 6
 
@@ -40,6 +58,13 @@ let _isGameComplete = false;
 rollDiceButton.addEventListener("click", onTapRollDice);
 holdButton.addEventListener("click", onTapHold);
 newGameButton.addEventListener("click", onTapNewGame);
+
+const nextGameButton = document.querySelector(".btn--next");
+
+nextGameButton.addEventListener("click", () => {
+  alert("¡Próximo juego iniciado!");
+  // Aquí puedes añadir la lógica para reiniciar o cambiar el juego
+});
 
 // Funcionalidad para lanzar el dado
 function onTapRollDice() {

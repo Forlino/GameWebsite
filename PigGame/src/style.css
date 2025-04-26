@@ -13,24 +13,25 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  font-weight: 400;
-  height: 100vh;
+  font-weight: 300;
+  height: 100vh;   /* Menu de juego */
   color: #333;
-  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  background-image: url("https://i.imgur.com/z58dJiy.png");
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* LAYOUT */
+
+/* DISPOSICION */
 main {
   position: relative;
   width: 100rem;
   height: 60rem;
-  background-color: rgba(255, 255, 255, 0.35);
+  background-color: rgba(250, 67, 67, 0.35); /* Cuadrado */
   backdrop-filter: blur(200px);
   filter: blur();
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3rem 5rem rgba(245, 75, 75, 0.25);
   border-radius: 9px;
   overflow: hidden;
   display: flex;
@@ -45,7 +46,7 @@ main {
   transition: all 0.75s;
 }
 
-/* ELEMENTS */
+/* ELEMENTOS*/
 .name {
   position: relative;
   font-size: 4rem;
@@ -59,7 +60,7 @@ main {
 .score {
   font-size: 8rem;
   font-weight: 300;
-  color: #c7365f;
+  color: #ff0000;
   margin-bottom: auto;
 }
 
@@ -78,10 +79,10 @@ main {
 }
 
 .current {
-  background-color: #c7365f;
+  background-color: #000000; /* Botones */
   opacity: 0.8;
   border-radius: 9px;
-  color: #fff;
+  color: #ff0000;
   width: 65%;
   padding: 2rem;
   text-align: center;
@@ -99,7 +100,6 @@ main {
   font-size: 3.5rem;
 }
 
-/* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
   position: absolute;
   left: 50%;
@@ -168,4 +168,47 @@ main {
 
 .hidden {
   display: none;
+}
+
+.timer {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 4rem; /* Tamaño de fuente más grande */
+  font-weight: 700;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem; /* Más espacio alrededor del texto */
+  border-radius: 10px; /* Bordes más redondeados */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 10;
+}
+
+.btn--next {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.btn--next:hover {
+  background-color: rgba(0, 0, 0, 1);
+  transform: translateY(-2px);
+}
+
+.btn--next:active {
+  transform: translateY(2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
