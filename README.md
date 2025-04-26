@@ -13,6 +13,8 @@ Bienvenido a ForliGames, una colección de juegos web atractivos desarrollados c
 
 1. **AdivinaMiNúmero:** Pon a prueba tus habilidades para adivinar números en este divertido y desafiante juego donde intentas adivinar el número secreto. (Estoy editando el codigo de este juego, lo tome de otro desarrollador)
 2. **RollGame:** Un clásico juego de dados donde los jugadores compiten para alcanzar la puntuación objetivo acumulando puntos sin sacar un 1.
+   ![Rollgame](https://github.com/user-attachments/assets/87e31184-5a09-4c85-8db8-b7ee585a3fec)
+
    (PROXIMAMENTE AÑADIRE MAS)
 
 ## Comenzando
